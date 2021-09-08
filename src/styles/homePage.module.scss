@@ -1,0 +1,25 @@
+.homePage {
+  @apply p-10 relative;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+
+  .inputsPanel {
+    @apply flex mx-auto items-center justify-around flex-wrap bg-primary absolute;
+    width: 90%;
+    height: 60%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 30px;
+  }
+
+  .logo {
+    @apply absolute bottom-10 right-10;
+    width: 100px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
