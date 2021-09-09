@@ -6,15 +6,12 @@ const getBgColorStyles = (props) => {
   switch (props.bgColor) {
     case "primary":
       return tw`bg-primary hover:bg-primaryHover`;
-      break;
 
     case "secondary":
       return tw`bg-secondary hover:bg-secondaryHover`;
-      break;
 
     case "red":
       return tw`bg-red hover: bg-redHover`;
-      break;
 
     default:
       break;

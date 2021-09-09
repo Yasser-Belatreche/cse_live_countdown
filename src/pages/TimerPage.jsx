@@ -71,7 +71,7 @@ const Timer = ({ isTimerStart, currentTime, setCurrentTime }) => {
     }
 
     return () => clearInterval(interval);
-  }, [isTimerStart, currentTime]);
+  }, [isTimerStart, currentTime, setCurrentTime]);
 
   return (
     <div className={styles.timerContainer}>
