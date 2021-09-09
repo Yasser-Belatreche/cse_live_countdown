@@ -3,18 +3,14 @@ import React from "react";
 // context
 import { GetContext } from "./context";
 
-// components
-import HomePage from "./components/HomePage";
+// pages
+import HomePage from "./pages/HomePage";
+import TimerPage from "./pages/TimerPage";
 
 function App() {
-  const contextValues = GetContext();
-  console.log(contextValues);
+  const { isTimerSet } = GetContext();
 
-  return (
-    <>
-      <HomePage />
-    </>
-  );
+  return <>{!isTimerSet ? <HomePage /> : <TimerPage />}</>;
 }
 
 export default App;

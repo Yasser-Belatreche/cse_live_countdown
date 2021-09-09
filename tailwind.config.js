@@ -5,8 +5,13 @@ module.exports = {
     extend: {},
     colors: {
       primary: "#06A6FF",
-      seconday: "#FCF300",
+      primaryHover: "#039ff3",
+      secondary: "#FCF300",
+      secondaryHover: "#fff706",
       red: "#FF0000",
+      redHover: "#e00202",
+      white: "#ffffff",
+      transparent: "transparent",
     },
   },
   variants: {

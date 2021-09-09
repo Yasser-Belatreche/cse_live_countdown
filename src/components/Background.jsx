@@ -1,28 +1,19 @@
 import styled from "styled-components";
+import tw from "twin.macro";
 import backgroundImage from "../images/bg.png";
 
-const StyledBackground = styled.div`
+const Background = styled.img.attrs(() => {
+  return { src: backgroundImage };
+})`
+  ${tw`fixed top-0 left-0`}
   z-index: -1;
   width: 100vw;
   height: 100vh;
 
-  img {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  @media (max-width: 800px) {
+    object-fit: cover;
     object-position: center;
   }
 `;
-
-const Background = ({ children }) => {
-  return (
-    <StyledBackground>
-      <img src={backgroundImage} alt="background image" />
-      {children}
-    </StyledBackground>
-  );
-};
 
 export { Background };

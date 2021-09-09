@@ -1,25 +1,68 @@
 .homePage {
-  @apply p-10 relative;
+  @apply p-10 px-20 mx-auto relative flex gap-6 flex-col justify-start items-center;
   z-index: 1;
-  width: 100vw;
-  height: 100vh;
+  height: inherit;
+  max-width: 1300px;
 
   .inputsPanel {
-    @apply flex mx-auto items-center justify-around flex-wrap bg-primary absolute;
-    width: 90%;
-    height: 60%;
-    top: 50%;
-    transform: translateY(-50%);
+    @apply flex items-center py-16 justify-around flex-wrap bg-primary p-10;
+    width: 100%;
     border-radius: 30px;
+
+    .inputsContainer {
+      @apply flex flex-col;
+      width: 60%;
+      max-width: 600px;
+      min-width: 400px;
+
+      .timeInput {
+        @apply flex gap-1 justify-between;
+
+        input {
+          width: 40%;
+          height: 10%;
+        }
+
+        span {
+          @apply text-white font-bold;
+          font-size: 150px;
+
+          line-height: 1;
+
+          @media (max-width: 1200px) {
+            font-size: 120px;
+          }
+
+          @media (max-width: 900px) {
+            @apply mb-10;
+            font-size: 100px;
+          }
+        }
+      }
+    }
+
+    .buttonsContainer {
+      @apply flex flex-col items-center;
+      width: 25%;
+      min-width: 300px;
+    }
   }
 
   .logo {
-    @apply absolute bottom-10 right-10;
-    width: 100px;
+    @apply fixed bottom-10 right-10;
+    width: 60px;
 
     img {
       width: 100%;
       height: auto;
     }
+
+    @media (max-width: 800px) {
+      @apply absolute;
+    }
+  }
+
+  @media (max-width: 800px) {
+    @apply px-0 pb-36;
   }
 }

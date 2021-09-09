@@ -1,0 +1,76 @@
+.timerPage {
+  @apply relative flex flex-col items-center justify-center;
+  width: 100vw;
+  height: 100vh;
+
+  .headers {
+    @apply absolute top-10 left-10;
+  }
+
+  .timerContainer {
+    @apply flex gap-3;
+
+    .logoContainer {
+      height: 200px;
+
+      @media (max-width: 800px) {
+        height: 150px;
+      }
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    .textContainer {
+      @apply flex flex-col gap-2;
+
+      h1 {
+        @apply text-primary;
+        font-size: 52px;
+        line-height: 1;
+
+        @media (max-width: 800px) {
+          font-size: 40px;
+        }
+      }
+
+      .timeContainer {
+        @apply flex justify-between gap-2 items-center;
+        width: 470px;
+
+        @media (max-width: 800px) {
+          width: 300px;
+        }
+
+        p,
+        span {
+          width: 45%;
+          font-size: 140px;
+          line-height: 1;
+
+          @media (max-width: 800px) {
+            font-size: 80px;
+          }
+        }
+
+        span {
+          width: 10%;
+          @apply relative bottom-3;
+        }
+      }
+    }
+  }
+  .buttonsContainer {
+    @apply flex absolute bottom-10 right-10;
+
+    button {
+      @apply mx-4;
+    }
+
+    @media (max-width: 800px) {
+      @apply w-full right-0 justify-center;
+    }
+  }
+}

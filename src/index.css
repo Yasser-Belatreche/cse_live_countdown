@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Gotham";
+  src: url("./fonts/Gotham-Font/Gotham-Bold.otf"),
+    url("./fonts/Gotham-Font/GothamBold.ttf"),
+    url("./fonts/Gotham-Font/Gotham-Black.otf"),
+    url("./fonts/Gotham-Font/GothamMedium.ttf"),
+    url("./fonts/Gotham-Font/GothamMedium_1.ttf"),
+    url("./fonts/Gotham-Font/GothamBook.ttf"),
+    url("./fonts/Gotham-Font/Gotham-Thin.otf");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,15 +21,4 @@
 
 body {
   font-family: "Gotham", sans-serif;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url("./fonts/Gotham-Font/Gotham-Bold.otf") format("otf"),
-    url("./fonts/Gotham-Font/GothamBold.ttf") format("ttf"),
-    url("./fonts/Gotham-Font/Gotham-Black.otf") format("otf"),
-    url("./fonts/Gotham-Font/GothamMedium.ttf") format("ttf"),
-    url("./fonts/Gotham-Font/GothamMedium_1.ttf") format("ttf"),
-    url("./fonts/Gotham-Font/GothamBook.ttf") format("ttf"),
-    url("./fonts/Gotham-Font/Gotham-Thin.otf") format("otf");
 }
